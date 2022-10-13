@@ -128,5 +128,19 @@ bolo_de_casamento = Boleria(
     'Pedido Mãe Joana', 300, id=1000, sabor='formigueiro',
     cobertura='chocolate premium com gotas de ouro', recheio='doce de cupuaçú'
 )
-
 print(bolo_de_casamento)
+
+
+pedido_dona_ana = CaixaRegistradora('Bolos Gostosinhos')
+
+pedido_dona_ana.adicionar_produto(bolo_de_cenoura, 1)
+pedido_dona_ana.fechar_conta()
+
+
+bolo_simples = Boleria('Pedido do Agostinho Carrara', 10, id=19, sabor='leite')
+bolo_mesclado_simples = Boleria('Pedido do Agostinho Carrara', 15,
+                                id=25, sabor='chocolate branco e preto')
+pedido_agostinho_carrara = CaixaRegistradora('Bolos Gostosinhos')
+pedido_agostinho_carrara.adicionar_produto(bolo_simples)
+pedido_agostinho_carrara.adicionar_produto(bolo_mesclado_simples)
+pedido_agostinho_carrara.fechar_conta()
